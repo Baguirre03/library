@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -12,10 +13,20 @@
     </header>
     <main>
         HELLO TEXT HERE
-        <button>click me to add a book yo</button>
+        <button type="submit" onclick="newBook();">CLICK ME TO ADD A BOOK Yo</button>
+        <form action="" class="form1">
+            <input type="text" id="title" placeholder="title">
+            <input type="text" id="author" placeholder="author">
+            <input type="text" id="pages" placeholder="pages">
+            <input type="text" id="readStatus" placeholder="read?">
+        </form>
+        <div class="books">
+            <button onclick="loopBooks();">LETS SEE</button>
+        </div>
     </main>
     <footer>
         copyright here
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>
