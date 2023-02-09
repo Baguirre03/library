@@ -27,7 +27,14 @@ function addBookToLibrary(objectHolder) {
 
 function loopBooks() {
     for (var i = 0; i < myLibrary.length; i++) {
-        console.log(myLibrary[i])
+        let cards = document.querySelector('.cards')
+        var newDiv = document.createElement('div')
+        newDiv.id = 'card'+i;
+        newDiv.classList = 'bookInfo'
+        var newBook = `${myLibrary[i].title} ${myLibrary[i].author} ${myLibrary[i].pages} ${myLibrary[i].read}`
+        newDiv.textContent = newBook
+        console.log(myLibrary[i].title)
+        cards.appendChild(newDiv)
     }
 }
 
