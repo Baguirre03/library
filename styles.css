@@ -3,7 +3,14 @@ form {
     flex-direction: column;
 }
 
-.bookInfo {
+.cardsContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
     display: flex;
     flex-direction: column;
+    border: 2px solid black;
+    padding: 20px;
 }
