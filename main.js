@@ -42,14 +42,19 @@ function clearBooks() {
     }
 }
 
+
+
 //adds book to pages
 function loopBooks() {
     clearBooks();
     for (i = 0; i < myLibrary.length; i++) {
         let card = document.createElement('div')
-        let removeBtn = document.createElement('button')
 
-        card.dataset.book = 'book'+i;
+        let removeBtn = document.createElement('button')
+        removeBtn.classList.add(i)
+        removeBtn.textContent = 'remove'
+
+        card.dataset.book = i;
         cardsContainer.appendChild(card)
         card.classList.add('card')
 
@@ -74,6 +79,15 @@ function loopBooks() {
         card.appendChild(pageInfo);
         card.appendChild(readInfo);
         card.appendChild(removeBtn);
+
+        removeBtn.addEventListener('click', () => {
+            let deleteFromLibrary = removeBtn.classList
+            if (deleteFromLibrary.value === card.dataset.book){
+                console.log('hi')
+                card.remove();
+                myLibrary.splice(deleteFromLibrary)
+            }
+    })
     }
 }
 
