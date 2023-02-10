@@ -13,7 +13,6 @@ Book.prototype.info = function() {
     console.log(`${this.title} written by ${this.author} is ${this.pages} pages long and you have ${this.read} it`)
 }
 
-
 function newBook() {
     const title = document.getElementById('title').value
     const author = document.getElementById('author').value
@@ -31,10 +30,12 @@ function newBook() {
     }
 }
 
+//pushes the book to myLibrary[]
 function addBookToLibrary(objectHolder) {
     myLibrary.push(objectHolder)
 }
 
+//clears books before adding them again
 function clearBooks() {
     while (cardsContainer.firstChild) {
         cardsContainer.removeChild(cardsContainer.firstChild);
@@ -46,6 +47,7 @@ function loopBooks() {
     clearBooks();
     for (i = 0; i < myLibrary.length; i++) {
         let card = document.createElement('div')
+        let removeBtn = document.createElement('button')
 
         card.dataset.book = 'book'+i;
         cardsContainer.appendChild(card)
@@ -68,12 +70,12 @@ function loopBooks() {
         readInfo.classList.add('readInfo')
 
         card.appendChild(titleInfo);
-        card.appendChild(authorInfo)
-        card.appendChild(pageInfo)
-        card.appendChild(readInfo)
+        card.appendChild(authorInfo);
+        card.appendChild(pageInfo);
+        card.appendChild(readInfo);
+        card.appendChild(removeBtn);
     }
 }
-
 
 const testBook = new Book('Harry Potter', 'JK Rowling', '500', 'read')
 myLibrary.push(testBook)
