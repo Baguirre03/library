@@ -12,18 +12,23 @@
         <h2 class="logo">Library</h2>
     </header>
     <main>
-        <button type="submit" event.preventDefault(); onclick="newBook();">CLICK ME TO ADD A BOOK Yo</button>
-        <form action="" class="form1">
-            <input type="text" id="title" placeholder="title">
-            <input type="text" id="author" placeholder="author">
-            <input type="text" id="pages" placeholder="pages">
-            <input type="text" id="readStatus" placeholder="read?">
-        </form>
-        <div class="books">
-            <div class="cardsContainer"></div>
-            <button onclick="loopBooks();">LETS SEE</button>
+        <div class="addBook">
+            <button type="submit" class="add" onclick="showForm();">+ Add a Book</button>
+            <form action="" class="form1" id="formElement">
+                <input type="text" id="title" placeholder="Title">
+                <input type="text" id="author" placeholder="author">
+                <input type="text" id="pages" placeholder="pages">
+                <input type="checkbox" id="readStatus" placeholder="read?">
+            </form>
+            <div class="books">
+                <div class="cardsContainer"></div>
+                <button onclick="newBook();">LETS SEE</button>
+            </div>
         </div>
     </main>
+    <footer>
+        <p class="copyright">Copyright © 2023 Ben Aguirre</p>
+    </footer>
 </body>
 <script src="main.js"></script>
 </html>

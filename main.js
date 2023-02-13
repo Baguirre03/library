@@ -89,9 +89,7 @@ function loopBooks() {
     }
 }
 
-const testBook = new Book('Harry Potter', 'JK Rowling', '500', 'read')
-myLibrary.push(testBook)
-const testbook3 = new Book('Harry Potter33', 'JK Rowling', '500', 'read')
-myLibrary.push(testbook3)
-const testBook2 = new Book('BensBook', 'Ben Aguirre', '30', 'not read')
-myLibrary.push(testBook2)
+//Show form on click
+function showForm() {
+    document.getElementById('formElement').style.display = 'flex';
+}

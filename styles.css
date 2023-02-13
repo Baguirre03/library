@@ -2,12 +2,40 @@
 
 * {
     font-family: 'Mukta', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header */
+
+header {
+    display: flex;
+    background-color: aqua;
+    font-size: 2rem;
+}
+
+/* main */
+
+.addBook {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.add {
+    display: flex;
+}
 
 form {
     display: flex;
     flex-direction: column;
+    display: none;
 }
 
 .cardsContainer {
@@ -20,4 +48,13 @@ form {
     flex-direction: column;
     border: 2px solid black;
     padding: 20px;
+}
+
+/* Footer */
+
+footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
 }
