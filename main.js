@@ -50,9 +50,8 @@ function removeBookFromLibrary(number) {
 }
 
 function getInfo(object) {
-    let bookInformation = document.createElement('div')
-    blurThis.appendChild(bookInformation)
-    bookInformation.classList.add('information-popup')
+    let bookInformation = document.querySelector('.information-popup')
+    bookInformation.classList.add('active')
     let varHolder = myLibrary[object].info();
     bookInformation.textContent = varHolder
 }

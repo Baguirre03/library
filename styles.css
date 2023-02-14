@@ -170,7 +170,15 @@ select {
 }
 .getAllInfo {
 }
+
 .information-popup {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    background-color: wheat;
+    left: 50%;  transform: translate(-50%, -50%);
+}
+.information-popup.active {
     display: flex;
     justify-content: center;
     background-color: var(--DarkGray);
@@ -182,6 +190,7 @@ select {
     width: 50vw;
     font-size: 2rem;
     padding: 10px;
+    transition: 2s;
 }
 
 /* Footer */
