@@ -78,11 +78,16 @@ function loopBooks() {
         readInfo.textContent = myLibrary[i].read
         readInfo.classList.add('readInfo')
 
+        let getAllInfo = document.createElement('button')
+        getAllInfo.textContent = 'info'
+        getAllInfo.classList.add('getAllInfo')
+
         card.appendChild(titleInfo);
         card.appendChild(authorInfo);
         card.appendChild(pageInfo);
         card.appendChild(readInfo);
         card.appendChild(removeBtn);
+        card.appendChild(getAllInfo);
         
         removeBtn.addEventListener('click', () => {
             removeBookFromLibrary(card.dataset.book);
@@ -102,3 +107,9 @@ function removeForm() {
 
 const harryPotter = new Book('Harry Potter', 'JK Rowling', '300', 'read');
 addBookToLibrary(harryPotter)
+const newPOT = new Book('Harry Potterjjjjjj', 'JK Rowling', '300', 'read');
+addBookToLibrary(newPOT)
+const newpap = new Book('Harry Potter', 'JK Rowling', '300', 'read');
+addBookToLibrary(newpap)
+const pap = new Book('Harry Potter', 'JK Rowling', '300', 'read');
+addBookToLibrary(pap)
