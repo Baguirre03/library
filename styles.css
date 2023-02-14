@@ -33,9 +33,22 @@ header {
 }
 
 form {
-    display: flex;
-    flex-direction: column;
     display: none;
+    flex-direction: column;
+    position: absolute;
+    align-self: center;
+    top: 50%; transform: translate(0%, -30vh);
+    background-color: orangered;
+    width: 50vh;
+    height: 500px;
+    border: black 2px solid;
+    border-radius: 1vw;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    width: 80%;
 }
 
 .cardsContainer {

@@ -19,10 +19,10 @@
                 <input type="text" id="author" placeholder="author">
                 <input type="text" id="pages" placeholder="pages">
                 <input type="checkbox" id="readStatus" placeholder="read?">
+                <button onclick="newBook(); event.preventDefault(); removeForm();" id="createBook">LETS SEE</button>
             </form>
             <div class="books">
                 <div class="cardsContainer"></div>
-                <button onclick="newBook();">LETS SEE</button>
             </div>
         </div>
     </main>
