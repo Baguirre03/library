@@ -12,7 +12,7 @@ function Book(title, author, pages, read) {
 }
 
 Book.prototype.info = function() {
-    console.log(`${this.title} written by ${this.author} is ${this.pages} pages long and you have ${this.read} it`)
+    return (`${this.title} written by ${this.author} is ${this.pages} pages long and you have ${this.read} it`)
 }
 
 function newBook() {
@@ -50,9 +50,11 @@ function removeBookFromLibrary(number) {
 }
 
 function getInfo(object) {
-    let information = myLibrary[object].info();
     let bookInformation = document.createElement('div')
-    bookInformation.textContent = information
+    blurThis.appendChild(bookInformation)
+    bookInformation.classList.add('information-popup')
+    let varHolder = myLibrary[object].info();
+    bookInformation.textContent = varHolder
 }
 
 //adds book to pages

@@ -170,6 +170,19 @@ select {
 }
 .getAllInfo {
 }
+.information-popup {
+    display: flex;
+    justify-content: center;
+    background-color: var(--DarkGray);
+    color: var(--CherryPink);
+    position: absolute;
+    top: 50%; transform: translate(-50%, -50%);
+    left: 50%;
+    height: 30vh;
+    width: 50vw;
+    font-size: 2rem;
+    padding: 10px;
+}
 
 /* Footer */
 
