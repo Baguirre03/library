@@ -97,7 +97,7 @@ form.visible {
     transition: 1s;
 }
 /* Form styling */
-.form1 {
+#formElement {
     background-color: var(--DarkGray);
     color: var(--PowderBlue);
 }

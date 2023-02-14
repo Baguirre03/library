@@ -107,14 +107,8 @@ function showForm() {
 //Remove form
 function removeForm() {
     form.classList.toggle('visible')
-    blurThis.classList.toggle('active')
+    blurThis.classList.toggle('active');
 }
 
 const harryPotter = new Book('Harry Potter', 'JK Rowling', '300', 'read');
 addBookToLibrary(harryPotter)
-const newPOT = new Book('Harry Potterjjjjjj', 'JK Rowling', '300', 'read');
-addBookToLibrary(newPOT)
-const newpap = new Book('Harry Potter', 'JK Rowling', '300', 'read');
-addBookToLibrary(newpap)
-const pap = new Book('Harry Potter', 'JK Rowling', '300', 'read');
-addBookToLibrary(pap)
