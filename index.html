@@ -24,30 +24,30 @@
             <p class="copyright blur">Copyright © 2023 Ben Aguirre</p>
         </footer>
     </div>
-    <form action="get" id="formElement">
-        <div>
-            <label for="title">Book Title:</label>
-            <input type="text" id="title" placeholder="Title" required>
+    <form action="" id="formElement">
+        <div class="title-div">
+            <label for="title-form">Book Title:</label>
+            <input type="text" id="title-form" placeholder="Title" required>
         </div>
 
-        <div>
-            <label for="author">Author:</label>
-            <input type="text" id="author" placeholder="author" required>
+        <div class="author-div">
+            <label for="author-form">Author:</label>
+            <input type="text" id="author-form" placeholder="author" required>
         </div>
 
-        <div>
-            <label for="pages">Amount of Pages:</label>
-            <input type="text" id="pages" placeholder="pages" required>
+        <div class="pages-div">
+            <label for="pages-form">Amount of Pages:</label>
+            <input type="text" id="pages-form" placeholder="pages" required>
         </div>
 
-        <div>
-            <label for="readStatus">Have you read this book?</label>
-            <select name="Read Status" id="readStatus">
+        <div class="read-status-div">
+            <label for="readStatus-form">Have you read this book?</label>
+            <select name="Read Status" id="readStatus-form">
                 <option value="Read">Read</option>
                 <option value="Not read">Not Read</option>
             </select>
         </div>
-        <button type="reset" form="formElement" onclick="newBook(); event.preventDefault(); removeForm(); this.form.reset();" id="createBook">Add Book</button>
+        <button form="formElement" onclick="newBook(); event.preventDefault(); removeForm(); this.form.reset();" id="createBook">Add Book</button>
     </form>
 </body>
 <script src="main.js"></script>

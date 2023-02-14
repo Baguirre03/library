@@ -16,10 +16,10 @@ Book.prototype.info = function() {
 }
 
 function newBook() {
-    const title = document.getElementById('title').value
-    const author = document.getElementById('author').value
-    const pages = document.getElementById('pages').value
-    const readStatus = document.getElementById('readStatus').value
+    const title = document.getElementById('title-form').value
+    const author = document.getElementById('author-form').value
+    const pages = document.getElementById('pages-form').value
+    const readStatus = document.getElementById('readStatus-form').value
     const emptyInputs = (title === "" && author === "" && pages === "" && readStatus === "")
 
     if (emptyInputs) {

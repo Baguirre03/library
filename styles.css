@@ -74,8 +74,6 @@ form {
     visibility: hidden;
     flex-direction: column;
     position: absolute;
-    align-items: center;
-    justify-content: center;
     border: black 2px solid;
     border-radius: 1vw;
     width: 40vh;
@@ -100,11 +98,36 @@ form.visible {
 #formElement {
     background-color: var(--DarkGray);
     color: var(--PowderBlue);
+    padding: 10px;
+    gap: 30px;
+    font-size: 30px;
+}
+input {
+    height: 30px;
+    color: var(--DarkGray);
 }
 
-input {
-    width: 80%;
+.title-div {
+    display: flex;
+    flex-direction: column;
 }
+
+.author-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.pages-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.read-status-div {
+    display: flex;
+    flex-direction: column;
+}
+
+/*  */
 
 .cardsContainer {
     display: flex;
