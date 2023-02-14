@@ -8,26 +8,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="blur">
         <h2 class="logo">Library</h2>
     </header>
     <main>
         <div class="mainContainer">
             <button type="submit" class="addNewBook" onclick="showForm();">+ Add a Book</button>
-                <form action="" class="form1" id="formElement">
-                    <input type="text" id="title" placeholder="Title" required>
-                    <input type="text" id="author" placeholder="author" required>
-                    <input type="text" id="pages" placeholder="pages" required>
-                    <p>Read?<input type="checkbox" id="readStatus"></p>
-                    <button onclick="newBook(); event.preventDefault(); removeForm();" id="createBook">LETS SEE</button>
-                </form>
             <div class="books">
                 <div class="cardsContainer"></div>
             </div>
         </div>
     </main>
+    <form action="" class="form1" id="formElement">
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="author" placeholder="author" required>
+        <input type="text" id="pages" placeholder="pages" required>
+        <p>Read?<input type="checkbox" id="readStatus"></p>
+        <button onclick="newBook(); event.preventDefault(); removeForm();" id="createBook">LETS SEE</button>
+    </form>
     <footer>
-        <p class="copyright">Copyright © 2023 Ben Aguirre</p>
+        <p class="copyright blur">Copyright © 2023 Ben Aguirre</p>
     </footer>
 </body>
 <script src="main.js"></script>

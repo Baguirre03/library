@@ -2,7 +2,6 @@ let myLibrary = [];
 let cardsContainer = document.querySelector('.cardsContainer')
 let createBook = document.getElementById('createBook')
 let form = document.getElementById('formElement')
-let bodyAll = document.querySelector('header')
 
 
 function Book(title, author, pages, read) {
@@ -100,13 +99,12 @@ function loopBooks() {
 //Show form on click
 function showForm() {
     form.style.display = 'flex'
-    bodyAll.style.filter = 'blur(1px)'
-    form.style.filter = 'blur(0px)'
 }
 
 //Remove form
 function removeForm() {
     form.style.display = 'none'
+    blurThis.style.filter = 'blur(0px)'
 }
 
 const harryPotter = new Book('Harry Potter', 'JK Rowling', '300', 'read');
