@@ -25,6 +25,10 @@ header {
     font-size: 2rem;
 }
 
+.logo {
+    padding-left: 20px;
+}
+
 /* main */
 
 main {
@@ -38,7 +42,18 @@ main {
 }
 
 .addNewBook {
-    background-color: white;
+    align-self: center;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 1vh;
+    background-color: var(--PowderBlue);
+    font-size: 2rem;
+    width: max-content;
+    border: none;
+}
+
+.addNewBook:hover {
+    background-color: var(--CherryPink);
 }
 
 .add {
@@ -50,14 +65,14 @@ form {
     flex-direction: column;
     position: absolute;
     align-self: center;
-    top: 50%; transform: translate(0%, -30vh);
-    background-color: var(--DarkGray);
     width: 50vh;
     height: 500px;
-    border: black 2px solid;
-    border-radius: 1vw;
     align-items: center;
     justify-content: center;
+    top: 50%; transform: translate(0%, -30vh);
+    background-color: var(--DarkGray);
+    border: black 2px solid;
+    border-radius: 1vw;
 }
 
 input {
@@ -66,14 +81,36 @@ input {
 
 .cardsContainer {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    padding: 20px;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     border: 2px solid black;
-    padding: 20px;
+    background-color: var(--CherryPink);
+    border-radius: 11px;
+    padding: 10px 0px 10px 0px;
+    width: 200px;
+    height: 200px;
+}
+.bookInfo {
+    align-self: center;
+    width: 100%;
+}
+
+.title {
+    background-color: #333333;
+}
+.author {
+}
+.pages {
+}
+.readInfo {
+}
+.getAllInfo {
 }
 
 /* Footer */

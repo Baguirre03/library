@@ -14,13 +14,13 @@
     <main>
         <div class="mainContainer">
             <button type="submit" class="addNewBook" onclick="showForm();">+ Add a Book</button>
-            <form action="" class="form1" id="formElement">
-                <input type="text" id="title" placeholder="Title">
-                <input type="text" id="author" placeholder="author">
-                <input type="text" id="pages" placeholder="pages">
-                <input type="checkbox" id="readStatus" placeholder="read?">
-                <button onclick="newBook(); event.preventDefault(); removeForm();" id="createBook">LETS SEE</button>
-            </form>
+                <form action="" class="form1" id="formElement">
+                    <input type="text" id="title" placeholder="Title" required>
+                    <input type="text" id="author" placeholder="author" required>
+                    <input type="text" id="pages" placeholder="pages" required>
+                    <p>Read?<input type="checkbox" id="readStatus"></p>
+                    <button onclick="newBook(); event.preventDefault(); removeForm();" id="createBook">LETS SEE</button>
+                </form>
             <div class="books">
                 <div class="cardsContainer"></div>
             </div>

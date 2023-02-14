@@ -2,6 +2,8 @@ let myLibrary = [];
 let cardsContainer = document.querySelector('.cardsContainer')
 let createBook = document.getElementById('createBook')
 let form = document.getElementById('formElement')
+let bodyAll = document.querySelector('header')
+
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -55,7 +57,7 @@ function loopBooks() {
         let card = document.createElement('div')
         let removeBtn = document.createElement('button')
 
-        removeBtn.classList.add(i)
+        removeBtn.classList.add('removeBtn', 'bookInfo')
         removeBtn.textContent = 'remove'
 
         card.dataset.book = i;
@@ -64,19 +66,19 @@ function loopBooks() {
 
         let titleInfo = document.createElement('div')
         titleInfo.textContent = myLibrary[i].title
-        titleInfo.classList.add('title')
+        titleInfo.classList.add('title', 'bookInfo')
 
         let authorInfo = document.createElement('div')
         authorInfo.textContent = myLibrary[i].author
-        authorInfo.classList.add('author')
+        authorInfo.classList.add('author', 'bookInfo')
 
         let pageInfo = document.createElement('div')
         pageInfo.textContent = myLibrary[i].pages
-        pageInfo.classList.add('pages')
+        pageInfo.classList.add('pages', 'bookInfo')
 
         let readInfo = document.createElement('div')
         readInfo.textContent = myLibrary[i].read
-        readInfo.classList.add('readInfo')
+        readInfo.classList.add('readInfo', 'bookInfo')
 
         let getAllInfo = document.createElement('button')
         getAllInfo.textContent = 'info'
@@ -98,6 +100,8 @@ function loopBooks() {
 //Show form on click
 function showForm() {
     form.style.display = 'flex'
+    bodyAll.style.filter = 'blur(1px)'
+    form.style.filter = 'blur(0px)'
 }
 
 //Remove form
