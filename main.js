@@ -96,9 +96,12 @@ function loopBooks() {
     }
 }
 
+const blurThis = document.querySelector('.blur')
+
 //Show form on click
 function showForm() {
     form.style.display = 'flex'
+    blurThis.classList.toggle('active')
 }
 
 //Remove form
