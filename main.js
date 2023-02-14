@@ -100,13 +100,13 @@ const blurThis = document.querySelector('.container')
 
 //Show form on click
 function showForm() {
-    form.style.display = 'flex'
+    form.classList.toggle('visible')
     blurThis.classList.toggle('active')
 }
 
 //Remove form
 function removeForm() {
-    form.style.display = 'none'
+    form.classList.toggle('visible')
     blurThis.classList.toggle('active')
 }
 

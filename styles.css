@@ -22,7 +22,7 @@ body {
 }
 
 .container.active {
-    filter: blur(1px);
+    filter: blur(.8px);
 }
 
 /* header */
@@ -69,19 +69,32 @@ main {
 }
 
 form {
-    display: none;
+    display: flex;
+    visibility: hidden;
     flex-direction: column;
     position: absolute;
-    width: 40vh;
-    height: 500px;
     align-items: center;
     justify-content: center;
-    top: 50%; transform: translate(0%, -30vh);
-    left: 50%; transform: translate(-50%, -50%);
     background-color: var(--DarkGray);
     border: black 2px solid;
     border-radius: 1vw;
-    transition: 3s;
+    width: 40vh;
+    height: 500px;
+    scale: .1;
+    top: 50%; transform: translate(-50%, -50%);
+    left: 50%; transform: translate(-50%, -50%);
+    transition: 1ms;
+}
+
+form.visible {
+    display: flex;
+    visibility: visible;
+    width: 40vh;
+    height: 500px;
+    scale: 1;
+    top: 50%; transform: translate(-50%, -50%);
+    left: 50%; transform: translate(-50%, -50%);
+    transition: 1s;
 }
 
 input {
