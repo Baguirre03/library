@@ -96,7 +96,7 @@ function loopBooks() {
     }
 }
 
-const blurThis = document.querySelector('.blur')
+const blurThis = document.querySelector('.container')
 
 //Show form on click
 function showForm() {
@@ -107,7 +107,7 @@ function showForm() {
 //Remove form
 function removeForm() {
     form.style.display = 'none'
-    blurThis.style.filter = 'blur(0px)'
+    blurThis.classList.toggle('active')
 }
 
 const harryPotter = new Book('Harry Potter', 'JK Rowling', '300', 'read');

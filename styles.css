@@ -21,6 +21,10 @@ body {
     height: 100%;
 }
 
+.container.active {
+    filter: blur(1px);
+}
+
 /* header */
 
 header {
@@ -68,15 +72,16 @@ form {
     display: none;
     flex-direction: column;
     position: absolute;
-    align-self: center;
-    width: 50vh;
+    width: 40vh;
     height: 500px;
     align-items: center;
     justify-content: center;
     top: 50%; transform: translate(0%, -30vh);
+    left: 50%; transform: translate(-50%, -50%);
     background-color: var(--DarkGray);
     border: black 2px solid;
     border-radius: 1vw;
+    transition: 3s;
 }
 
 input {
