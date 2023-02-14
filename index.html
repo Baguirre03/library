@@ -24,12 +24,23 @@
             <p class="copyright blur">Copyright © 2023 Ben Aguirre</p>
         </footer>
     </div>
-    <form action="" class="form1" id="formElement">
+    <form action="get" class="form1" id="formElement">
+        <label for="title">Book Title:</label>
         <input type="text" id="title" placeholder="Title" required>
+
+        <label for="author">Author:</label>
         <input type="text" id="author" placeholder="author" required>
+
+        <label for="pages">Amount of Pages:</label>
         <input type="text" id="pages" placeholder="pages" required>
-        <p>Read?<input type="checkbox" id="readStatus"></p>
-        <button onclick="newBook(); event.preventDefault(); removeForm();" id="createBook">LETS SEE</button>
+
+        <label for="readStatus">Have you read this book?</label>
+        <select name="Read Status" id="readStatus">
+            <option value="read">Read</option>
+            <option value="not-read">Not Read</option>
+        </select>
+
+        <button type="submit" form="formElement" onclick="newBook(); event.preventDefault(); removeForm();" id="createBook">LETS SEE</button>
     </form>
 </body>
 <script src="main.js"></script>
