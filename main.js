@@ -52,8 +52,10 @@ function removeBookFromLibrary(number) {
 function getInfo(object) {
     let bookInformation = document.querySelector('.information-popup')
     bookInformation.classList.add('active')
-    let varHolder = myLibrary[object].info();
-    bookInformation.textContent = varHolder
+    bookInformation.textContent = myLibrary[object].info();
+    let deleteButton = document.createElement('button')
+    deleteButton.textContent = 'x'
+    bookInformation.appendChild(deleteButton)
 }
 
 //adds book to pages

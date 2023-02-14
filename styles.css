@@ -174,12 +174,15 @@ select {
 .information-popup {
     display: flex;
     position: absolute;
+    visibility: hidden;
     top: 50%;
     background-color: wheat;
     left: 50%;  transform: translate(-50%, -50%);
 }
 .information-popup.active {
     display: flex;
+    flex-direction: column;
+    visibility: visible;
     justify-content: center;
     background-color: var(--DarkGray);
     color: var(--CherryPink);
