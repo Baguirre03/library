@@ -81,8 +81,8 @@ form {
     width: 40vh;
     height: 500px;
     scale: .1;
-    top: 50%; transform: translate(-50%, -50%);
-    left: 50%; transform: translate(-50%, -50%);
+    top: 20%; transform: translate(-50%, -50%);
+    left: 34.6%; transform: translate(-50%, -50%);
     transition: 1ms;
 }
 
