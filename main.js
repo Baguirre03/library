@@ -49,6 +49,12 @@ function removeBookFromLibrary(number) {
     loopBooks();
 }
 
+function getInfo(object) {
+    let information = myLibrary[object].info();
+    let bookInformation = document.createElement('div')
+    bookInformation.textContent = information
+}
+
 //adds book to pages
 function loopBooks() {
     clearBooks();
@@ -92,6 +98,10 @@ function loopBooks() {
         
         removeBtn.addEventListener('click', () => {
             removeBookFromLibrary(card.dataset.book);
+        })
+
+        getAllInfo.addEventListener('click', () => {
+           getInfo(card.dataset.book)
         })
     }
 }

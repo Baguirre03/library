@@ -8,6 +8,7 @@
     --Gray: #666A86;
     --PowderBlue: #95B8D1;
     --CherryPink: #EDAFB8;
+    --DutchWhite: #E8DDB5;
 }
 
 body {
@@ -146,19 +147,20 @@ select {
     display: flex;
     flex-direction: column;
     border: 2px solid black;
-    background-color: var(--CherryPink);
-    border-radius: 11px;
-    padding: 10px 0px 10px 0px;
+    background-color: var(--DutchWhite);
+    border-radius: 6px;
     width: 200px;
-    height: 200px;
+    height: 240px;
 }
 .bookInfo {
-    align-self: center;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
 }
 
 .title {
-    background-color: #333333;
+    background-color: var(--DarkGray);
+    color: white;
 }
 .author {
 }
