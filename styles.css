@@ -88,7 +88,7 @@ form.visible {
     display: flex;
     visibility: visible;
     width: 40vh;
-    height: 500px;
+    height: min-content;
     scale: 1;
     top: 50%; transform: translate(-50%, -50%);
     left: 50%; transform: translate(-50%, -50%);
@@ -99,12 +99,18 @@ form.visible {
     background-color: var(--DarkGray);
     color: var(--PowderBlue);
     padding: 10px;
-    gap: 30px;
-    font-size: 30px;
+    gap: 10px;
+    font-size: 1.5rem;
 }
 input {
     height: 30px;
-    color: var(--DarkGray);
+}
+select {
+    height: 30px;
+}
+
+#createBook {
+    height: 30px;
 }
 
 .title-div {
