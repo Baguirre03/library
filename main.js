@@ -49,13 +49,18 @@ function removeBookFromLibrary(number) {
     loopBooks();
 }
 
+//information popup
 function getInfo(object) {
     let bookInformation = document.querySelector('.information-popup')
-    bookInformation.classList.add('active')
+    bookInformation.classList.toggle('active')
     bookInformation.textContent = myLibrary[object].info();
+
     let deleteButton = document.createElement('button')
     deleteButton.textContent = 'x'
     bookInformation.appendChild(deleteButton)
+    deleteButton.addEventListener('click', () => {
+        bookInformation.classList.toggle('active')
+    })
 }
 
 //adds book to pages
@@ -66,7 +71,7 @@ function loopBooks() {
         let removeBtn = document.createElement('button')
 
         removeBtn.classList.add('removeBtn', 'bookInfo')
-        removeBtn.textContent = 'remove'
+        removeBtn.textContent = 'delete'
 
         card.dataset.book = i;
         cardsContainer.appendChild(card)

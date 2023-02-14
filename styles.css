@@ -159,6 +159,7 @@ select {
 }
 
 .title {
+    display: flex;
     background-color: var(--DarkGray);
     color: white;
 }
@@ -168,7 +169,12 @@ select {
 }
 .readInfo {
 }
+
+.removeBtn {
+    background-color: var(--PowderBlue);
+}
 .getAllInfo {
+    background-color: var(--CherryPink);
 }
 
 .information-popup {
@@ -189,11 +195,11 @@ select {
     position: absolute;
     top: 50%; transform: translate(-50%, -50%);
     left: 50%;
-    height: 30vh;
-    width: 50vw;
+    height: min-content;
+    width: 30vw;
     font-size: 2rem;
     padding: 10px;
-    transition: 2s;
+    transition: 1s;
 }
 
 /* Footer */
