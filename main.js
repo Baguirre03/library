@@ -12,7 +12,7 @@ function Book(title, author, pages, read) {
 }
 
 Book.prototype.info = function() {
-    return (`${this.title} written by ${this.author} is ${this.pages} pages long and you have ${this.read} it`)
+    return (`${this.title} is written by ${this.author} is ${this.pages} pages long and you have ${this.read} it!`)
 }
 
 function newBook() {
@@ -57,6 +57,7 @@ function getInfo(object) {
 
     let deleteButton = document.createElement('button')
     deleteButton.textContent = 'x'
+    deleteButton.classList.add('delete')
     bookInformation.appendChild(deleteButton)
     deleteButton.addEventListener('click', () => {
         bookInformation.classList.toggle('active')
