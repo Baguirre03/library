@@ -167,6 +167,3 @@ function removeForm() {
     form.classList.toggle('visible')
     blurThis.classList.toggle('active');
 }
-
-const harryPotter = new Book('Harry Potter', 'JK Rowling', '300', 'read');
-addBookToLibrary(harryPotter)

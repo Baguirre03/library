@@ -218,7 +218,8 @@ select {
     position: absolute;
     visibility: hidden;
     top: 50%;
-    background-color: wheat;
+    background-color: var(--DutchWhite);
+    color: black;
     left: 50%;  transform: translate(-50%, -50%);
 }
 .information-popup.active {
@@ -236,11 +237,13 @@ select {
     font-size: 2rem;
     padding: 10px;
     transition: 1s;
+    border-radius: 1vw;
 }
 
 .delete {
-    position: relative; 
-    width: 10%;
+    width: 50%;
+    color: var(--PowderBlue);
+    align-self: center;
     font-size: 2rem;
     background-color: var(--DarkGray);
 }
