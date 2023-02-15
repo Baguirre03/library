@@ -20,9 +20,10 @@ function newBook() {
     const author = document.getElementById('author-form').value
     const pages = document.getElementById('pages-form').value
     const readStatus = document.getElementById('readStatus-form').value
-    const emptyInputs = (title === "" && author === "" && pages === "" && readStatus === "")
+    const emptyInputs = (title === "" || author === "" || pages === "" || readStatus === "")
 
     if (emptyInputs) {
+        console.log('test')
         alert('fill in all the info!')
         return
     } else {
@@ -95,7 +96,6 @@ function loopBooks() {
         pageInfo.classList.add('pages')
 
         let readInfo = document.createElement('div')
-        console.log(myLibrary[i].read)
         readInfo.textContent = myLibrary[i].read
         if (myLibrary[i].read === 'Read') {
             readInfo.classList.add('readInfo')
@@ -134,6 +134,7 @@ function loopBooks() {
 
         readInfo.addEventListener('click', () => {
             changeReadStatus(readInfo);
+
         })
     }
 }
@@ -156,6 +157,7 @@ function changeReadStatus(div) {
     if (div.textContent === "Not read") {
         div.classList.toggle('notRead')
         div.textContent = "Read"
+
     } else {
         div.classList.toggle('notRead')
         div.textContent = "Not read"
