@@ -12,8 +12,8 @@
 }
 
 body {
-    height: 100vh;
     width: 100vw;
+    height: 100vh;
 }
 
 .container {
@@ -48,6 +48,7 @@ main {
 .mainContainer {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .addNewBook {
@@ -196,10 +197,6 @@ select:focus {
     align-items: center;
     font-size: 1.1rem;
     gap: 10px;
-}
-.author {
-}
-.pages {
 }
 .readInfo {
     border: solid black 2px;
