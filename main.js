@@ -12,7 +12,9 @@ function Book(title, author, pages, read) {
 }
 
 Book.prototype.info = function() {
-    return (`${this.title} is written by ${this.author} is ${this.pages} pages long and you have ${this.read} it!`)
+    let changedFirstLetter = this.read
+    changedFirstLetter.toLowerCase();
+    return (`${this.title} is written by ${this.author} is ${this.pages} pages long and you have ${changedFirstLetter} it!`)
 }
 
 function newBook() {
@@ -20,11 +22,11 @@ function newBook() {
     const author = document.getElementById('author-form').value
     const pages = document.getElementById('pages-form').value
     const readStatus = document.getElementById('readStatus-form').value
-    const emptyInputs = (title === "" || author === "" || pages === "" || readStatus === "")
+    const emptyInputs = (title === "" || author === "" || pages === "")
 
     if (emptyInputs) {
-        console.log('test')
-        alert('fill in all the info!')
+        alert('Please fill in all the inputs')
+        showForm();
         return
     } else {
     const objectHolder = new Book(title, author, pages, readStatus);
@@ -50,6 +52,7 @@ function removeBookFromLibrary(number) {
     loopBooks();
 }
 
+//For clicking on Read/NotRead Div
 function changeReadStatus(div, position) {
     if (div.textContent === "Not read") {
         div.classList.toggle('notRead')
