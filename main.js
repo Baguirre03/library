@@ -54,11 +54,11 @@ function changeReadStatus(div, position) {
     if (div.textContent === "Not read") {
         div.classList.toggle('notRead')
         div.textContent = "Read"
-        myLibrary[position].readStatus = "Read"
+        myLibrary[position].read = "Read"
     } else {
         div.classList.toggle('notRead')
         div.textContent = "Not read"
-        myLibrary[position].readStatus = "Not read"
+        myLibrary[position].read = "Not read"
     }
 }
 
