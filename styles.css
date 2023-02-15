@@ -103,16 +103,38 @@ form.visible {
     padding: 10px;
     gap: 10px;
     font-size: 1.5rem;
+    box-shadow: 3px 3px 1px var(--DarkGray);
 }
 input {
     height: 30px;
+    border-color: var(--Gray);
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-bottom: 2px solid var(--CherryPink);
+    background-color: var(--DarkGray);
 }
+input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--DutchWhite);
+}
+input::placeholder {
+    color: white;
+}
+
 select {
     height: 30px;
+    font-size: 1.1rem;
+    background-color: var(--DarkGray);
+    color: white;
+}
+select:focus {
+    outline: none;
 }
 
 #createBook {
     height: 30px;
+    background-color: var(--CherryPink);
 }
 
 .title-div {
@@ -154,6 +176,7 @@ select {
     border-radius: 6px;
     width: 200px;
     height: 240px;
+    box-shadow: 4px 3px 1px var(--Gray)
 }
 
 .title {
@@ -185,6 +208,7 @@ select {
     justify-content: center;
     border-radius: 100px;
     background-color: lightgreen;
+    box-shadow: 4px 3px 1px var(--DarkGray)
 }
 .readInfo:hover {
     cursor: pointer;
@@ -238,6 +262,7 @@ select {
     padding: 10px;
     transition: 1s;
     border-radius: 1vw;
+    box-shadow: 4px 3px 1px var(--Gray)
 }
 
 .delete {
