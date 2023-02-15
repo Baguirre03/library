@@ -75,7 +75,7 @@ function loopBooks() {
         let card = document.createElement('div')
         let removeBtn = document.createElement('button')
 
-        removeBtn.classList.add('removeBtn', 'bookInfo')
+        removeBtn.classList.add('removeBtn')
         removeBtn.textContent = 'Delete'
 
         card.dataset.book = i;
@@ -84,19 +84,19 @@ function loopBooks() {
 
         let titleInfo = document.createElement('div')
         titleInfo.textContent = myLibrary[i].title
-        titleInfo.classList.add('title', 'bookInfo')
+        titleInfo.classList.add('title')
 
         let authorInfo = document.createElement('div')
-        authorInfo.textContent = myLibrary[i].author
-        authorInfo.classList.add('author', 'bookInfo')
+        authorInfo.textContent = `Author: ${myLibrary[i].author}`
+        authorInfo.classList.add('author')
 
         let pageInfo = document.createElement('div')
-        pageInfo.textContent = myLibrary[i].pages
-        pageInfo.classList.add('pages', 'bookInfo')
+        pageInfo.textContent = `Pages: ${myLibrary[i].pages}`
+        pageInfo.classList.add('pages')
 
         let readInfo = document.createElement('div')
         readInfo.textContent = myLibrary[i].read
-        readInfo.classList.add('readInfo', 'bookInfo')
+        readInfo.classList.add('readInfo')
 
         let getAllInfo = document.createElement('button')
         getAllInfo.textContent = 'Get info'
@@ -104,11 +104,16 @@ function loopBooks() {
 
         let buttonHolder = document.createElement('div')
         buttonHolder.classList.add('button-holder')
+        let authorReadHolder = document.createElement('div')
+        authorReadHolder.classList.add('author-read-holder')
 
         card.appendChild(titleInfo);
-        card.appendChild(authorInfo);
-        card.appendChild(pageInfo);
-        card.appendChild(readInfo);
+        card.appendChild(authorReadHolder);
+
+        authorReadHolder.appendChild(authorInfo);
+        authorReadHolder.appendChild(pageInfo);
+        authorReadHolder.appendChild(readInfo);
+
         card.appendChild(buttonHolder)
 
         buttonHolder.appendChild(getAllInfo);
