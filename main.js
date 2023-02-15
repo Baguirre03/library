@@ -95,8 +95,13 @@ function loopBooks() {
         pageInfo.classList.add('pages')
 
         let readInfo = document.createElement('div')
+        console.log(myLibrary[i].read)
         readInfo.textContent = myLibrary[i].read
-        readInfo.classList.add('readInfo')
+        if (myLibrary[i].read === 'Read') {
+            readInfo.classList.add('readInfo')
+        } else {
+            readInfo.classList.add('readInfo', 'notRead')
+        }
 
         let getAllInfo = document.createElement('button')
         getAllInfo.textContent = 'Get info'
@@ -126,6 +131,10 @@ function loopBooks() {
         getAllInfo.addEventListener('click', () => {
            getInfo(card.dataset.book)
         })
+
+        readInfo.addEventListener('click', () => {
+            changeReadStatus(readInfo);
+        })
     }
 }
 
@@ -141,6 +150,16 @@ function showForm() {
 function removeForm() {
     form.classList.toggle('visible')
     blurThis.classList.toggle('active');
+}
+
+function changeReadStatus(div) {
+    if (div.textContent === "Not read") {
+        div.classList.toggle('notRead')
+        div.textContent = "Read"
+    } else {
+        div.classList.toggle('notRead')
+        div.textContent = "Not read"
+    }
 }
 
 const harryPotter = new Book('Harry Potter', 'JK Rowling', '300', 'read');

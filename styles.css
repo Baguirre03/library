@@ -186,9 +186,12 @@ select {
     border-radius: 100px;
     background-color: lightgreen;
 }
+.readInfo:hover {
+    cursor: pointer;
+}
 
 .readInfo.notRead {
-    
+    background-color: var(--CherryPink);
 }
 
 .button-holder {
