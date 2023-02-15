@@ -14,7 +14,7 @@ function Book(title, author, pages, read) {
 Book.prototype.info = function() {
     let changedFirstLetter = this.read
     changedFirstLetter.toLowerCase();
-    return (`${this.title} is written by ${this.author} is ${this.pages} pages long and you have ${changedFirstLetter} it!`)
+    return (`${this.title} is written by ${this.author} and is ${this.pages} pages long; you have ${changedFirstLetter} it!`)
 }
 
 function newBook() {
