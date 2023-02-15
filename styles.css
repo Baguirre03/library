@@ -174,7 +174,7 @@ select:focus {
     border: 2px solid black;
     background-color: var(--DutchWhite);
     border-radius: 6px;
-    width: 200px;
+    width: 250px;
     height: 240px;
     box-shadow: 4px 3px 1px var(--Gray)
 }
