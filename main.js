@@ -76,7 +76,7 @@ function loopBooks() {
         let removeBtn = document.createElement('button')
 
         removeBtn.classList.add('removeBtn', 'bookInfo')
-        removeBtn.textContent = 'delete'
+        removeBtn.textContent = 'Delete'
 
         card.dataset.book = i;
         cardsContainer.appendChild(card)
@@ -99,15 +99,20 @@ function loopBooks() {
         readInfo.classList.add('readInfo', 'bookInfo')
 
         let getAllInfo = document.createElement('button')
-        getAllInfo.textContent = 'info'
+        getAllInfo.textContent = 'Get info'
         getAllInfo.classList.add('getAllInfo')
+
+        let buttonHolder = document.createElement('div')
+        buttonHolder.classList.add('button-holder')
 
         card.appendChild(titleInfo);
         card.appendChild(authorInfo);
         card.appendChild(pageInfo);
         card.appendChild(readInfo);
-        card.appendChild(removeBtn);
-        card.appendChild(getAllInfo);
+        card.appendChild(buttonHolder)
+
+        buttonHolder.appendChild(getAllInfo);
+        buttonHolder.appendChild(removeBtn);
         
         removeBtn.addEventListener('click', () => {
             removeBookFromLibrary(card.dataset.book);

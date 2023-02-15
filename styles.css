@@ -96,6 +96,7 @@ form.visible {
     transition: 1s;
 }
 /* Form styling */
+
 #formElement {
     background-color: var(--DarkGray);
     color: var(--PowderBlue);
@@ -134,7 +135,8 @@ select {
     flex-direction: column;
 }
 
-/*  */
+/* Form styling END */
+/* Card Styling */
 
 .cardsContainer {
     display: flex;
@@ -170,12 +172,25 @@ select {
 .readInfo {
 }
 
+.button-holder {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
 .removeBtn {
-    background-color: var(--PowderBlue);
+    background-color: var(--CherryPink);
+    margin: 2px;
+    height: 30px;
+    align-items: center;
 }
 .getAllInfo {
-    background-color: var(--CherryPink);
+    background-color: var(--PowderBlue);
+    margin: 2px;
+    height: 30px;
 }
+
+/* Card styling END */
 
 .information-popup {
     display: flex;
