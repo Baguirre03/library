@@ -23,7 +23,7 @@ body {
 }
 
 .container.active {
-    filter: blur(.8px);
+    filter: blur(2px);
 }
 
 /* header */

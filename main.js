@@ -55,12 +55,16 @@ function getInfo(object) {
     bookInformation.classList.toggle('active')
     bookInformation.textContent = myLibrary[object].info();
 
+    blurThis.classList.toggle('active')
+
     let deleteButton = document.createElement('button')
     deleteButton.textContent = 'x'
     deleteButton.classList.add('delete')
     bookInformation.appendChild(deleteButton)
+
     deleteButton.addEventListener('click', () => {
         bookInformation.classList.toggle('active')
+        blurThis.classList.toggle('active')
     })
 }
 
