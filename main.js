@@ -50,6 +50,19 @@ function removeBookFromLibrary(number) {
     loopBooks();
 }
 
+function changeReadStatus(div, position) {
+    if (div.textContent === "Not read") {
+        div.classList.toggle('notRead')
+        div.textContent = "Read"
+        myLibrary[position].readStatus = "Read"
+    } else {
+        div.classList.toggle('notRead')
+        div.textContent = "Not read"
+        myLibrary[position].readStatus = "Not read"
+    }
+}
+
+
 //information popup
 function getInfo(object) {
     let bookInformation = document.querySelector('.information-popup')
@@ -133,8 +146,7 @@ function loopBooks() {
         })
 
         readInfo.addEventListener('click', () => {
-            changeReadStatus(readInfo);
-
+            changeReadStatus(readInfo, card.dataset.book);
         })
     }
 }
@@ -151,17 +163,6 @@ function showForm() {
 function removeForm() {
     form.classList.toggle('visible')
     blurThis.classList.toggle('active');
-}
-
-function changeReadStatus(div) {
-    if (div.textContent === "Not read") {
-        div.classList.toggle('notRead')
-        div.textContent = "Read"
-
-    } else {
-        div.classList.toggle('notRead')
-        div.textContent = "Not read"
-    }
 }
 
 const harryPotter = new Book('Harry Potter', 'JK Rowling', '300', 'read');
