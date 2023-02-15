@@ -43,7 +43,7 @@ header {
 main {
     background-color: var(--PowderBlue);
     height: 100%;
-    overflow: auto;
+    overflow: scroll;
 }
 
 .mainContainer {
@@ -278,4 +278,16 @@ footer {
     justify-content: center;
     font-size: 1.3rem;
     background-color: var(--PowderBlue);
+}
+
+/* Phone Cleaner look */
+
+@media screen and (max-width: 567px) {
+    .cardsContainer {
+        align-items: center;
+        justify-content: center;
+    }
+    .information-popup.active {
+        font-size: 1.1rem;
+    }
 }
