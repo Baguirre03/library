@@ -3,18 +3,19 @@ let cardsContainer = document.querySelector('.cardsContainer')
 let createBook = document.getElementById('createBook')
 let form = document.getElementById('formElement')
 
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
-
-Book.prototype.info = function() {
-    let changedFirstLetter = this.read
-    changedFirstLetter.toLowerCase();
-    return (`${this.title} is written by ${this.author} and is ${this.pages} pages long; you have ${changedFirstLetter} it!`)
+    info() {
+        let changedFirstLetter = this.read
+        changedFirstLetter.toLowerCase();
+        return (`${this.title} is written by ${this.author} and is ${this.pages} pages long; you have ${changedFirstLetter} it!`)
+    }
 }
 
 function newBook() {
