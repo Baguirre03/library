@@ -10,7 +10,7 @@ class Book {
         this.pages = pages;
         this.read = read;
     }
-
+//comment
     info() {
         let changedFirstLetter = this.read
         changedFirstLetter.toLowerCase();
